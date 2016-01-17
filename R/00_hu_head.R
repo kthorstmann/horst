@@ -13,6 +13,8 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
+devtools::install_github("kthorstmann/horst")
+library(horst)
 
 # build --------------------------------------------------------------
 
