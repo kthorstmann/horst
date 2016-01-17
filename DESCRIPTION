@@ -1,0 +1,21 @@
+Package: horst
+Type: Package
+Title: Functions for the processing of questionnaire data
+Version: 0.1
+Date: 2016-01-12
+Authors@R: person("Kai Tobias", "Horstmann", email = "horstmak@hu-berlin.de", role = c("aut", "cre"))
+Maintainer: Kai T. Horstmann <horstmak@hu-berlin.de>
+Description: A package with different functions used at Psychological
+    Diagnostics at HU Berlin. Mainly functions for the screening, recoding and
+    processing of questionnaire data.
+License: What license is it under?
+LazyData: TRUE
+Suggests: 
+    openxlsx,
+    psych,
+    lavaan,
+    data.table,
+    knitr,
+    rmarkdown
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
