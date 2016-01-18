@@ -13,14 +13,21 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-devtools::install_github("kthorstmann/horst")
-library(horst)
-
+# library(devtools)
+# devtools::install_github("kthorstmann/horst")
+# library(Hmisc)
+# library(psych)
+# library(xlsx)
+# library(data.table)
 
 # readme -------------------------------------------------------------
 
-
-
+# devtools::use_readme_rmd()
+#
+# x <- seq(1:5)
+#
+# for (i in seq_along(data)){
+#   print(i)}
 
 # build --------------------------------------------------------------
 
@@ -54,7 +61,7 @@ library(horst)
 #
 # browseVignettes()
 # devtools::use_vignette("horst-vignette")
-# # test ---------------------------------------------------------------
+# test -----------------------------------------------------------------
 #
 # # devtools::use_testthat()
 #

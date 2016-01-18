@@ -1,7 +1,6 @@
 
 
 
-
 # function_getTable --------------------------------------------------
 
 #' Get correlation tables for data frames.
