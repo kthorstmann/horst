@@ -48,6 +48,7 @@
 # install("horst")
 # library(horst)
 
+
 # use functions ------------------------------------------------------
 
 # ?omegaW
@@ -55,6 +56,8 @@
 # ?getTable
 # ?corHist
 # ?matchItems
+# ?plotMod
+
 
 
 # # vignette -----------------------------------------------------------

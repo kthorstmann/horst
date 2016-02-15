@@ -41,7 +41,7 @@
 
 getTable <- function(data, apa = F, xlsx = F, xlsxName = "Result_getTable",
                      diag = "", diag2 = "", round = 3,
-                     detachPackages = FALSE, ...) {
+                     ...) {
 
   is.num <- sapply(data, is.numeric)
   nonNumeric <- names(data)[!is.num]

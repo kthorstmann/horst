@@ -5,7 +5,7 @@
 \title{Get correlation tables for data frames.}
 \usage{
 getTable(data, apa = F, xlsx = F, xlsxName = "Result_getTable",
-  diag = "", diag2 = "", round = 3, detachPackages = FALSE, ...)
+  diag = "", diag2 = "", round = 3, ...)
 }
 \arguments{
 \item{data}{The data frame for which the correlations should be
