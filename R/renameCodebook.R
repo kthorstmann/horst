@@ -14,7 +14,7 @@
 #'
 #' @export
 #'
-#' @seealso Not much
+#' @seealso \code{\link[horst]{matchItems}}
 
 
 

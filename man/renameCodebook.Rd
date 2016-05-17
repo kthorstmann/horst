@@ -26,6 +26,6 @@ A data set contains variable names, which are usually short. The more meaningful
 Details to be shown
 }
 \seealso{
-Not much
+\code{\link[horst]{matchItems}}
 }
 
