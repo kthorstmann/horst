@@ -7,11 +7,13 @@ This is a collection of functions used be and some of my colleagues in [Pscholog
 
 Up to now, there are only very few functions and most of them are tailored to a specific problem, relying on input from specific functions from other packages (see respective help-pages).
 
-\begin{description}
-\item[omegaW] A function to compute Omega's W.
-\item[simpsonCor] A plot that allows discovering the Simpsons Paradox.
-\item[getTable] A function that produces a correlation table in Excel which is close enough to an APA correlation table for further editing.
-\item[matchItems] Based on the \code{psych} package, this function adds items from a codebook to the result of an efa.
-\item[plotMod] Plots an interaction on three dimensions, one being coloured dots.
-\item[renameCodebook] Using a codebook (for example from excel), function changes names in a data set according to the codebook. 
-\end{description}
+Note: Dependencies need to be installed and loaded manually!
+
+-   **corHist** A histogram of correlations on level-1 and level-2 in.
+-   **omegaW** A function to compute Omega's W.
+-   **simpsonCor** A plot that allows discovering the Simpsons Paradox.
+-   **getTable** A function that produces a correlation table in Excel which is close enough to an APA correlation table for further editing.
+-   **matchItems** Based on the `psych` package, this function adds items from a codebook to the result of an efa.
+-   **plotMod** Plots an interaction on three dimensions, one being coloured dots.
+-   **renameCodebook** Using a codebook (for example from excel), function changes names in a data set according to the codebook.
+-   **findMis** finds missing data (or other entries that can be specified) in any given data set.
