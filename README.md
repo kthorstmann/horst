@@ -3,9 +3,9 @@
 horst-package
 =============
 
-This is a collection of functions used be and some of my colleagues in [Pschological Diagnostics](https://www.psychologie.hu-berlin.de/de/personal/91680294) at Humboldt-University of Berlin.
+This is a collection of functions used by me and my colleagues in [Pschological Diagnostics](https://www.psychologie.hu-berlin.de/de/personal/91680294) at Humboldt-University of Berlin.
 
-Up to now, there are only very few functions and most of them are tailored to a specific problem, relying on input from specific functions from other packages (see respective help-pages).
+Until now, there are only very few functions and most of them are tailored to a specific problem, relying on input from specific functions from other packages (see respective help-pages).
 
 Note: Dependencies need to be installed and loaded manually!
 
@@ -17,3 +17,12 @@ Note: Dependencies need to be installed and loaded manually!
 -   **plotMod** Plots an interaction on three dimensions, one being coloured dots.
 -   **renameCodebook** Using a codebook (for example from excel), function changes names in a data set according to the codebook.
 -   **findMis** finds missing data (or other entries that can be specified) in any given data set.
+
+Installing the package:
+-----------------------
+
+Run the following code lines:
+
+    install.packages("devtools")
+    library(devtools)
+    devtools::install_github("kthorstmann/horst")

@@ -22,6 +22,15 @@ Note: Dependencies need to be installed and loaded manually!
 - **findMis** finds missing data (or other entries that can be specified) in any given data set.
 
 
+## Installing the package:
+
+Run the following code lines:
+
+```
+install.packages("devtools")
+library(devtools)
+devtools::install_github("kthorstmann/horst")
+```
 
 
 

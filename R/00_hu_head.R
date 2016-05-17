@@ -13,8 +13,8 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-# library(devtools)
 # install.packages("devtools")
+# library(devtools)
 
 # devtools::install_github("kthorstmann/horst")
 # install.packages("Hmisc")
