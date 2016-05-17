@@ -14,24 +14,26 @@
 #   Test Package:              'Cmd + Shift + T'
 
 # library(devtools)
+# install.packages("devtools")
+
 # devtools::install_github("kthorstmann/horst")
+# install.packages("Hmisc")
 # library(Hmisc)
 # library(psych)
 # library(xlsx)
+# install.packages("data.table")
 # library(data.table)
+
+# install.packages("roxygen2")
 
 # readme -------------------------------------------------------------
 
 # devtools::use_readme_rmd()
-#
-# x <- seq(1:5)
-#
-# for (i in seq_along(data)){
-#   print(i)}
+
 
 # build --------------------------------------------------------------
 
-
+# install.packages("roxygen2")
 # library(roxygen2)
 # library(devtools)
 # setwd("./horst")
@@ -57,13 +59,14 @@
 # ?corHist
 # ?matchItems
 # ?plotMod
-
+# ?renameCodebook
 
 
 # # vignette -----------------------------------------------------------
 #
 # browseVignettes()
 # devtools::use_vignette("horst-vignette")
+#
 # test -----------------------------------------------------------------
 #
 # # devtools::use_testthat()

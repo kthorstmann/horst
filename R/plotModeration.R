@@ -16,8 +16,8 @@
 
 plotMod <- function(data, x, y, mod, ...){
   # quantiles
-  x <- var1
-  y <- var2
+  var1 <- x
+  var2 <- y
   perc <- seq(.0, 1, by = 0.05)
   quants <- quantile(data[,mod], perc, na.rm=T)
   u.quants <- unique(quants)

@@ -1,8 +1,6 @@
 
 
 
-# function_getTable --------------------------------------------------
-
 #' Get correlation tables for data frames.
 #'
 #' A function to generate correlation tables that can be easily transformed
