@@ -17,6 +17,7 @@ Note: Dependencies need to be installed and loaded manually!
 -   **plotMod** Plots an interaction on three dimensions, one being coloured dots.
 -   **renameCodebook** Using a codebook (for example from excel), function changes names in a data set according to the codebook.
 -   **findMis** finds missing data (or other entries that can be specified) in any given data set.
+-   **vlookup** An immplementation of the VLOOKUP function from Excel.
 
 Installing the package:
 -----------------------

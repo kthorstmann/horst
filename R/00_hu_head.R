@@ -60,7 +60,7 @@
 # ?matchItems
 # ?plotMod
 # ?renameCodebook
-
+# ?vlookup
 
 # # vignette -----------------------------------------------------------
 #
