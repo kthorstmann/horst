@@ -21,7 +21,6 @@
 # library(Hmisc)
 # library(psych)
 # library(xlsx)
-# install.packages("data.table")
 # library(data.table)
 
 # install.packages("roxygen2")
@@ -66,7 +65,7 @@
 
 # # vignette -----------------------------------------------------------
 #
-# browseVignettes()
+#
 # devtools::use_vignette("horst-vignette")
 #
 # test -----------------------------------------------------------------

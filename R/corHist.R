@@ -50,7 +50,7 @@ if ( round(var(mean1, na.rm =TRUE), 1) == 0 | round(var(mean2, na.rm =TRUE), 1) 
   lvl1.cor.p  <- round(cor.lvll1$p.value, 3)
   lvl1.cor.df <- round(cor.lvll1$parameter, 3)
   # 4. plot
-  plot.new()
+  # plot.new()
   hist(unlist(cor.lvl1), breaks = 20, xlim = c(-1, 1),
         main="", xlab="", ylab="")
 

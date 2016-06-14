@@ -17,6 +17,7 @@ Suggests:
     data.table,
     knitr,
     rmarkdown,
-    purrr
+    purrr,
+    lme4
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
