@@ -10,12 +10,13 @@ Description: A package with different functions used at Psychological
     processing of questionnaire data.
 License: What license is it under?
 LazyData: TRUE
-Suggests: 
+Suggests:
     openxlsx,
     psych,
     lavaan,
     data.table,
     knitr,
-    rmarkdown
+    rmarkdown,
+    purrr
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr

@@ -14,10 +14,13 @@
 #'
 #' @export
 #'
-#' @seealso \code{\link{cor}}
+#' @seealso \code{\link[stats]{cor}}
+
 
 
 corHist <- function(data, var1, var2, cluster) {
+  requireNamespace("purrr", quietly = TRUE)
+
   variable.names                        <-  c(var1, var2, cluster)
   names(data)[names(data) == var1]      <- "lvl1.var1"
   names(data)[names(data) == var2]      <- "lvl1.var2"

@@ -24,6 +24,6 @@ variables and [[2]] their correlation on level-2. Currently,
 the pearson correlation is used for computing the correlation.
 }
 \seealso{
-\code{\link{cor}}
+\code{\link[stats]{cor}}
 }
 
