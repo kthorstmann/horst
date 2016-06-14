@@ -19,11 +19,11 @@ corHist(data, var1, var2, cluster)
 Plots a histogram of correlations to make Simpson's paradox visible.
 }
 \details{
-A histogram of correlations, [[1]] group means for both level-1
-variables as well as their correlations and [[2]] correlation plus
-CI for overall means.
+A histogram of correlations, [[1]] group means for the two level-1
+variables and [[2]] their correlation on level-2. Currently,
+the pearson correlation is used for computing the correlation.
 }
 \seealso{
-\code{\link[data.table]{data.table}}
+\code{\link{cor}}
 }
 
