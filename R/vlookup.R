@@ -2,7 +2,7 @@
 # to dos in function -------------------------------------------------
 
 # function should take a data frame and a vector
-
+# new line
 # within the data frame, two colums are selected, one that is the indicator and one that is the return value
 
 ## TESTTHAT
@@ -12,9 +12,6 @@
 # add also an quiet = TRUE element, that suppresses warnings.
 # add then onexit argument, that resets the options
 # see here the slides
-
-## add checks
-# Ändeurasd
 
 
 #' vlookup
@@ -36,6 +33,7 @@
 #' b = c("A", "B", "C", "D", "D", "E", "F", "D", NA),
 #' stringsAsFactors = FALSE)
 #' vlookup(data, look.for = c(1, 5), look.in = "a", return.from = "b", return.multiple=TRUE, return.na = TRUE)
+
 
 
 vlookup <- function(data, look.for, look.in,
