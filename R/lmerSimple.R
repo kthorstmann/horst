@@ -17,6 +17,7 @@
 #' @export
 #'
 #' @examples
+#' library(lme4)
 #' fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 #' fit
 lmerSimple <- function(criterion, fixed, random, interaction, cluster, data){
@@ -45,14 +46,17 @@ lmerSimple <- function(criterion, fixed, random, interaction, cluster, data){
 #' @examples
 #' fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 #' fit
-#' lmertvalue(fit)
+
+
 lmertvalue <- function(fit){
-  fix <- lme4::fixef(fit)/sqrt(diag(vcov(fit)))
+  fix <- coef(summary(fit))[,"t value"]
+  # fix <- lme4::fixef(fit)/sqrt(diag(vcov(fit)))
   fix.n <- as.data.frame(names(fix))
   fe1 <- cbind(fix.n,fix)
   rownames(fe1)  <- NULL
   fe1
 }
+
 
 #' Make a data frame of t-values.
 #'
