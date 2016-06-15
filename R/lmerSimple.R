@@ -78,10 +78,12 @@ merge.list.t <- function(list){
 #' Plot t-values from \code{lmer}-models
 #'
 #' @param t.value.frame A data frame that contains t-values of the fixed effects. Usually an object returned from \code{merge.list.t}
+#' @param axis.labels Should x-axis labels be drawn. Defaul is \code{TRUE}.
+#' @param ... Other parameters passed on to \code{plot}.
 #'
 #' @return Plots t-values and fixed effects.
 #' @export
-plot.tvalues <- function(t.value.frame){
+plot.tvalues <- function(t.value.frame, axis.labels = TRUE, ...){
   xlabels <- as.character(t.value.frame[,"Effects"])[-1]
   xrange <- c(1, length(xlabels))
   t.value.frame.red <- t.value.frame[-1,]
@@ -93,12 +95,15 @@ plot.tvalues <- function(t.value.frame){
        xlim = xrange,
        xaxt ="n",
        xlab = "",
-       ylab = "")
+       ylab = "",
+       ...)
   abline(h = c(-1.96, 0, 1.96))
-  axis(1, at = xrange[1]:xrange[2], labels = xlabels, las = 2, cex.axis = .8)
+  if (axis.labels) {
+    axis(1, at = xrange[1]:xrange[2], labels = xlabels, las = 2, cex.axis = .8)
+  }
+
 
   # plot lines
-
   for (i in 2:ncol(t.value.frame.red)) {
     lines(t.value.frame.red[,i], type = "c", lty = 1+i)
     points(t.value.frame.red[,i], type = "p",
@@ -110,6 +115,7 @@ plot.tvalues <- function(t.value.frame){
 #' lmerPlottt
 #'
 #' @param list.of.models Numerous multilevel models from \code{lme4}, entered as a list. If only one model is entered, needs also to be entered as a list, e. g. \code{list(fit)}.
+#' @param ... Other parameters passed on to \code{plot}.
 #'
 #' @return Plots all \emph{t}-values of fixed effects of the multilevel models. Significant t-values (5%, two tailed) are plotted as green dots, non-significant ones as red, empty dots. Each model gets an individual line. If models are nested, one can see how the fixed effects change when more model parameters are entered.
 #' @export
@@ -118,10 +124,10 @@ plot.tvalues <- function(t.value.frame){
 #' fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 #' fit
 #' lmerPlottt(list(fit))
-lmerPlottt <- function(list.of.models){
+lmerPlottt <- function(list.of.models, ...){
   all.t.val <- purrr::map(list.of.models, lmertvalue)
   t.value.frame <- merge.list.t(all.t.val)
-  plot.tvalues(t.value.frame)
+  plot.tvalues(t.value.frame, ...)
 }
 
 
