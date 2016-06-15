@@ -11,7 +11,7 @@
 #' @param random The random part of the multilevel-model. Can be variables on any level.
 #' @param interaction The interaction variables. Please enter as interaction term in \code{lmer} format.
 #' @param cluster The cluster variable in the data frame.
-#' @param data The data set
+#' @param data The data set.
 #'
 #' @return Returns an \code{lmer} model.
 #' @export
