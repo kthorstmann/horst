@@ -56,6 +56,8 @@ lmertvalue <- function(fit){
 
 #' Make a data frame of t-values.
 #'
+#' This function takes a list of \code{lmer}-models, extracts the fixed effects and returns their \emph{t}-values as a data frame. The names of the effects are matched by the \code{\link{merge}} function.
+#'
 #' @param A list of t-values.
 #'
 #' @return A data frame with t-values.
@@ -105,13 +107,11 @@ plot.tvalues <- function(t.value.frame){
   }
 }
 
-## final function for lmer.plot, this is extracted.
-# library(horst)
-#' Title
+#' lmerPlottt
 #'
 #' @param list.of.models Numerous multilevel models from \code{lme4}, entered as a list. If only one model is entered, needs also to be entered as a list, e. g. \code{list(fit)}.
 #'
-#' @return Plots all t-values of fixed effects of the multilevel models. Significant t-values (5%, two tailed) are plotted as green dots, non-significant ones as red, empty dots. Each model gets an individual line. If models are nested, one can see how the fixed effects change when more model parameters are entered.
+#' @return Plots all \emph{t}-values of fixed effects of the multilevel models. Significant t-values (5%, two tailed) are plotted as green dots, non-significant ones as red, empty dots. Each model gets an individual line. If models are nested, one can see how the fixed effects change when more model parameters are entered.
 #' @export
 #'
 #' @examples

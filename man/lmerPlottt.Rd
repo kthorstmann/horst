@@ -2,7 +2,7 @@
 % Please edit documentation in R/lmerSimple.R
 \name{lmerPlottt}
 \alias{lmerPlottt}
-\title{Title}
+\title{lmerPlottt}
 \usage{
 lmerPlottt(list.of.models)
 }
@@ -10,10 +10,10 @@ lmerPlottt(list.of.models)
 \item{list.of.models}{Numerous multilevel models from \code{lme4}, entered as a list. If only one model is entered, needs also to be entered as a list, e. g. \code{list(fit)}.}
 }
 \value{
-Plots all t-values of fixed effects of the multilevel models. Significant t-values (5%, two tailed) are plotted as green dots, non-significant ones as red, empty dots. Each model gets an individual line. If models are nested, one can see how the fixed effects change when more model parameters are entered.
+Plots all \emph{t}-values of fixed effects of the multilevel models. Significant t-values (5%, two tailed) are plotted as green dots, non-significant ones as red, empty dots. Each model gets an individual line. If models are nested, one can see how the fixed effects change when more model parameters are entered.
 }
 \description{
-Title
+lmerPlottt
 }
 \examples{
 fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)

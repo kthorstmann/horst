@@ -13,6 +13,6 @@
 A data frame with t-values.
 }
 \description{
-Make a data frame of t-values.
+This function takes a list of \code{lmer}-models, extracts the fixed effects and returns their \emph{t}-values as a data frame. The names of the effects are matched by the \code{\link{merge}} function.
 }
 
