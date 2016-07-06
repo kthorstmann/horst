@@ -20,10 +20,21 @@
 
 # function -----------------------------------------------------------
 
-
 renameCodebook <- function(data, codebook,
                            code.old.vars = "varname",
                            code.new.vars = "new.varname"){
+  # check the input, can only be one type
+  stopifnot(is.data.frame(data))
+  stopifnot(is.data.frame(codebook))
+  stopifnot(is.character(code.old.vars))
+  stopifnot(is.character(code.new.vars))
+  if (!any(code.old.vars == names(codebook))) {
+    stop(paste0(code.old.vars, "is not a variable in the codebook"))
+  }
+  if (!any(code.new.vars == names(codebook))) {
+    stop(paste0(code.new.vars, "is not a variable in the codebook"))
+  }
+
   codeb <- codebook
   new.long.names <- codeb[,code.new.vars] # the new names which replace
   old.names.in.data <- names(data) # the old names to be replaced
