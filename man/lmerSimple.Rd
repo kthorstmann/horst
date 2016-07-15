@@ -17,7 +17,7 @@ lmerSimple(criterion, fixed, random, interaction, cluster, data)
 
 \item{cluster}{The cluster variable in the data frame.}
 
-\item{data}{The data set}
+\item{data}{The data set.}
 }
 \value{
 Returns an \code{lmer} model.
@@ -29,6 +29,7 @@ A wrapper function for \code{lmer} models. The input are only character vectors.
 The model assumes always random intercepts.
 }
 \examples{
+library(lme4)
 fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 fit
 }

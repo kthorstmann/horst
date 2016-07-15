@@ -4,10 +4,14 @@
 \alias{plot.tvalues}
 \title{Plot t-values from \code{lmer}-models}
 \usage{
-\method{plot}{tvalues}(t.value.frame)
+\method{plot}{tvalues}(t.value.frame, axis.labels = TRUE, ...)
 }
 \arguments{
 \item{t.value.frame}{A data frame that contains t-values of the fixed effects. Usually an object returned from \code{merge.list.t}}
+
+\item{axis.labels}{Should x-axis labels be drawn. Defaul is \code{TRUE}.}
+
+\item{...}{Other parameters passed on to \code{plot}.}
 }
 \value{
 Plots t-values and fixed effects.

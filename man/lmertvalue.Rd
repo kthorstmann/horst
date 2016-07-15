@@ -18,6 +18,5 @@ Get t-values of multilevel-models
 \examples{
 fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 fit
-lmertvalue(fit)
 }
 

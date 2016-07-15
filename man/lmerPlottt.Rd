@@ -4,10 +4,12 @@
 \alias{lmerPlottt}
 \title{lmerPlottt}
 \usage{
-lmerPlottt(list.of.models)
+lmerPlottt(list.of.models, ...)
 }
 \arguments{
 \item{list.of.models}{Numerous multilevel models from \code{lme4}, entered as a list. If only one model is entered, needs also to be entered as a list, e. g. \code{list(fit)}.}
+
+\item{...}{Other parameters passed on to \code{plot}.}
 }
 \value{
 Plots all \emph{t}-values of fixed effects of the multilevel models. Significant t-values (5%, two tailed) are plotted as green dots, non-significant ones as red, empty dots. Each model gets an individual line. If models are nested, one can see how the fixed effects change when more model parameters are entered.
