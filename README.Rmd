@@ -23,6 +23,7 @@ Note: Dependencies need to be installed and loaded manually!
 - **vlookup** An immplementation of the VLOOKUP function from Excel.
 - **lmerSimple** A function to run lmer-models from character strings.
 - **lmerPlottt** A function to plot *t*-values of fixed effects from `lmer`-models
+- **tStats** A function to extract *t*-statistics (*t*, *df*, *p*) from a t.test to plot it, use it in word or latex.
 
 
 ## Installing the package:
