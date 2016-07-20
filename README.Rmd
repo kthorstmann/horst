@@ -24,6 +24,7 @@ Note: Dependencies need to be installed and loaded manually!
 - **lmerSimple** A function to run lmer-models from character strings.
 - **lmerPlottt** A function to plot *t*-values of fixed effects from `lmer`-models
 - **tStats** A function to extract *t*-statistics (*t*, *df*, *p*) from a t.test to plot it, use it in word or latex.
+- **withinFun** Apply a function to each entry in a nested data frame, i. e. compute the mean of a measurement for each subject in a longitudinal study.
 
 
 ## Installing the package:
