@@ -15,6 +15,9 @@ Compute factor reliability Omega_W for latent factors
 \details{
 The function computes omega_w, based on standardized factor loadings.
 }
+\author{
+Matthias Ziegler (Github: @zieglema, zieglema@hu-berlin.de), Kai T. Horstmann (horstmak@hu-berlin.de)
+}
 \seealso{
 \code{\link[lavaan]{cfa}}
 }

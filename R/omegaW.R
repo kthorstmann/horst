@@ -7,7 +7,7 @@
 #'
 #' @param fit A fitted lavaan object.
 #'
-#'
+#' @author Matthias Ziegler (Github: @zieglema, zieglema@@hu-berlin.de), Kai T. Horstmann (horstmak@@hu-berlin.de)
 #' @export
 #'
 #' @seealso \code{\link[lavaan]{cfa}}
