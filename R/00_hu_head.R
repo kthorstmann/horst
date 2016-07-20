@@ -45,6 +45,13 @@
 
 # devtools::use_build_ignore("00_hu_head.R")
 
+
+# suggests -----------------------------------------------------------
+
+# devtools::use_package("purrr")
+# devtools::use_package("stringr")
+# devtools::use_package("psych")
+
 # install ------------------------------------------------------------
 #
 # setwd("..")

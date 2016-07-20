@@ -8,7 +8,7 @@ Maintainer: Kai T. Horstmann <horstmak@hu-berlin.de>
 Description: A package with different functions used at Psychological
     Diagnostics at HU Berlin. Mainly functions for the screening, recoding and
     processing of questionnaire data.
-License: What license is it under?
+License: CC-BY
 LazyData: TRUE
 Suggests:
     openxlsx,
@@ -21,3 +21,6 @@ Suggests:
     lme4
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+Imports: purrr,
+    stringr,
+    psych
