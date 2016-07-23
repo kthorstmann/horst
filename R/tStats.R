@@ -46,7 +46,6 @@ tStats <- function(t.fit, round = 2, out.text = "plain",
   dfv <- round(t.fit$parameter, round)
   pv <- round(t.fit$p.value, round)
 
-
   v <- c(0, 0.001, 0.01, 0.05)
   int <- findInterval(pv, v, rightmost.closed = TRUE, left.open=TRUE)
   if (int == 1) {p.report <-  "< 0.001"} else {
@@ -82,6 +81,5 @@ tStats <- function(t.fit, round = 2, out.text = "plain",
   {
     report.text <-   message("not defined yet")
   }
-
   report.text
 }
