@@ -4,7 +4,8 @@
 \alias{tStats}
 \title{tStats as text}
 \usage{
-tStats(t.fit, round = 2, out.text = "plain")
+tStats(t.fit, round = 2, out.text = "plain", eff.size = NULL,
+  eff.type = NULL)
 }
 \arguments{
 \item{t.fit}{The object containing the result of \code{t.test}}
@@ -17,6 +18,10 @@ tStats(t.fit, round = 2, out.text = "plain")
 \item {\code{"plot"}} for an output that can be used as input for example in \code{text}.
 \item {\code{"latex"}} will follow for easy use in markdown.
 }}
+
+\item{eff.size}{Effect size that can be inserted manually (see \code{\link[compute.es]{tes}} for the computation of an effect size for a \emph{t}-value). Default is to \code{NULL}.}
+
+\item{eff.tpye}{Name of the effect size. Must be character. Default is to \code{NULL}.}
 }
 \value{
 Returns a character string with the \emph{t}-statistics of a t-test.
@@ -27,10 +32,8 @@ Get the \emph{t}-statistics from the object of \code{t.test}.
 \examples{
 fit <- t.test(1:10, y = c(7:20))
 boxplot(1:10, c(7:20))
-mtext(side = 1, line = 2, tStats(fit, out = "plain"))
-
-
-
+mtext(side = 1, line = 2, tStats(fit, out = "plot"))
+mtext(side = 3, line = 2, tStats(fit, out = "plot", eff.size = -2.29, eff.type = "d"))
 }
 \author{
 Kai T. Horstmann

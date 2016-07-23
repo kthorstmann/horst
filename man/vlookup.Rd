@@ -29,7 +29,7 @@ This function is an implementation of the vlookp function from Excel. It is used
 \examples{
 data <- data.frame(a = c(1, 2, 3, 5, 5, 3, NA, 4, 4),
 b = c("A", "B", "C", "D", "D", "E", "F", "D", NA),
-stringsAsFactors = FALSE)
+stringsAsFactors = TRUE)
 vlookup(data, look.for = c(1, 5), look.in = "a", return.from = "b", return.multiple=TRUE, return.na = TRUE)
 }
 

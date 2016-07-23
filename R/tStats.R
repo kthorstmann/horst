@@ -29,7 +29,6 @@
 #' mtext(side = 3, line = 2, tStats(fit, out = "plot", eff.size = -2.29, eff.type = "d"))
 
 
-
 tStats <- function(t.fit, round = 2, out.text = "plain",
                    eff.size = NULL, eff.type = NULL){
   if (!is.numeric(round)) {stop("'round' must be numeric")}
