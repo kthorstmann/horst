@@ -38,7 +38,7 @@ The results can be either of the following, depending on \code{return.data.frame
 
 \itemize{
  \item {\code{return.data.frame = TRUE}} This returns the complete data frame with the new variable included. The results of the function and the input data are merged by the \code{id.var}.The new variable has the name \code{variable_function}.
- \item {\code{return.data.frame = FALSE}} This returns a list with each entry being an \code{id.var}. This result can be easily used for further analses.
+ \item {\code{return.data.frame = FALSE}} This returns a list with each entry being an \code{id.var}. This result can be easily used for further analyses.
  }
 }
 \examples{

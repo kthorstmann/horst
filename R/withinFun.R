@@ -13,7 +13,7 @@
 #'
 #' \itemize{
 #'  \item {\code{return.data.frame = TRUE}} This returns the complete data frame with the new variable included. The results of the function and the input data are merged by the \code{id.var}.The new variable has the name \code{variable_function}.
-#'  \item {\code{return.data.frame = FALSE}} This returns a list with each entry being an \code{id.var}. This result can be easily used for further analses.
+#'  \item {\code{return.data.frame = FALSE}} This returns a list with each entry being an \code{id.var}. This result can be easily used for further analyses.
 #'  }
 #' @param data An object, a \code{data frame} or a \code{list}.
 #' @param id.var The variable in which the scores are clustered, usually an ID variable. Must be a character string.
