@@ -18,7 +18,8 @@ Suggests:
     knitr,
     rmarkdown,
     purrr,
-    lme4
+    lme4,
+    testthat
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
 Imports: purrr,

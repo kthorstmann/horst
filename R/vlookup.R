@@ -31,16 +31,22 @@
 #' @examples
 #' data <- data.frame(a = c(1, 2, 3, 5, 5, 3, NA, 4, 4),
 #' b = c("A", "B", "C", "D", "D", "E", "F", "D", NA),
-#' stringsAsFactors = FALSE)
+#' stringsAsFactors = TRUE)
 #' vlookup(data, look.for = c(1, 5), look.in = "a", return.from = "b", return.multiple=TRUE, return.na = TRUE)
 
-
+# data <- as.matrix(data)
+#
+# data <- as.data.frame(data)
 
 vlookup <- function(data, look.for, look.in,
                     return.from, return.multiple = FALSE,
                     return.na = TRUE){
 
   stopifnot(is.logical(return.multiple))
+  stopifnot(is.logical(return.na))
+  stopifnot(is.data.frame(data))
+
+
 
   ## replace these two in function, but only with version control ;)
   indicator <- look.in
@@ -55,12 +61,19 @@ vlookup <- function(data, look.for, look.in,
 
   # check that there are only unique values, give error when values are doubled.
 
+  ## check that data[, indicator] is not a factor:
+  if (is.factor(data[, indicator])) {
+    stop(paste0("look.in = `", indicator, "`.", indicator, " cannot be a factor. Please change to numeric or character"))
+  }
+
+
   ## function body:
   if (length(look.for) != length(unique(look.for))) {
     message("Some duplicates from `look.for` were removed")
     look.for <- unique(look.for)
   }
   pos.of.matches <- match(look.for, data[, indicator])
+
 
   # check if duplicates in look.for would return different results:
   if (return.multiple) {

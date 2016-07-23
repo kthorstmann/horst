@@ -46,6 +46,15 @@
 # devtools::use_build_ignore("00_hu_head.R")
 
 
+# tests --------------------------------------------------------------
+
+# library(testthat)
+
+# add test infrastructure
+# devtools::use_testthat()
+
+
+
 # suggests -----------------------------------------------------------
 
 # devtools::use_package("purrr")
