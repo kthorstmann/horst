@@ -1,5 +1,3 @@
-
-
 #' lmerSimple
 #'
 #' A wrapper function for \code{lmer} models. The input are only character vectors. the function can therefore be run over lists of character vectors.

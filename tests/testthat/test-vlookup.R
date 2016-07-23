@@ -1,9 +1,6 @@
-
-
 context("vlookup")
 
 
-library(horst)
 data <- data.frame(a = c(1, 2, 3, 5, 5, 3, NA, 4, 4),
                    b = c("A", "B", "C", "D", "D", "E", "F", "D", NA),
                    stringsAsFactors = FALSE)
@@ -20,13 +17,6 @@ test_that("Output is correct", {
                        return.from = "b", return.multiple=FALSE, return.na = TRUE),
                c("A", "D"))
   })
-
-
-
-
-
-
-
 
 
 data <- data.frame(a = as.factor(c(1, 2, 3, 5, 5, 3, NA, 4, 4)),
