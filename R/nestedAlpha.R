@@ -45,36 +45,35 @@ library(lme4)
 # lvl2 <- attr(VarCorr(mod)[[2]], "stddev")["(Intercept)"]^2
 # icc <- lvl2/(lvl1+lvl2)
 
+nestedAlpha(data = data,
+            item.level.1 = "variable",
+            level.2      = "day",
+            level.3      = "person")
 
-nestedAlpha <- function(){
+nestedAlpha <- function(item.level.1, level.2, level.3, data){
+
+  # make model
   model.string <- stringr::str_c("lme4::lmer(", item.level.1,
                                  " ~ 1 + (1 | ", level.3,
                                  ") + (1 | ", level.2,
                                  "), data = data)")
-
+  # run model
   model <- eval(parse(text = model.string))
 
-  # model <- lmer(variable ~ 1 + (1 | person) + (1 | day), data = data)
-  # summary(model)
-
   # extract variance:
+    # item level reliability (p. 4)
+      # level-1 variance:
+      var_item_lvl1 <- attr(VarCorr(model), "sc")^2
+      # level-2 variance:
+      var_occasion_lvl2 <- attr(VarCorr(model)[[2]], "stddev")["(Intercept)"]^2
 
-  # item level reliability:
-  # (level 1 variance)
-  var_item_lvl1 <- attr(VarCorr(model), "sc")^2
-  # (level 2 variance)
-  var_occasion_lvl2 <- attr(VarCorr(model)[[2]], "stddev")["(Intercept)"]^2
-
-  # length of scale
   # determine length of scale:
   p <- max(table(data$day, data$person))
 
 
-  # final reliability
+  # compute item level reliability
   item_alpha <- var_occasion_lvl2/(var_occasion_lvl2 + (var_item_lvl1/p))
   attr(item_alpha, "names") <- "alpha"
 
-  item_alpha
-
-
+  return(item_alpha)
 }
