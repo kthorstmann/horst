@@ -56,6 +56,6 @@ nestedAlpha(item.level.1 = "variable",
 K. T. Horstmann \email{horstmak@hu-berlin.de}
 }
 \references{
-Nezlek, J. B. (in press). A practical guide to understanding reliability in studies of within-person variability. \emph{Journal of Research in Personality}. \url{http://dx.doi.org/10.1016/j.jrp.2016.06.020.}
+Nezlek, J. B. (in press). A practical guide to understanding reliability in studies of within-person variability. \emph{Journal of Research in Personality}. \url{http://dx.doi.org/10.1016/j.jrp.2016.06.020}.
 }
 
