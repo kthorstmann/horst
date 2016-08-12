@@ -60,6 +60,7 @@
 # devtools::use_package("purrr")
 # devtools::use_package("stringr")
 # devtools::use_package("psych")
+# devtools::use_package("lme4")
 
 # install ------------------------------------------------------------
 #
