@@ -64,7 +64,7 @@ withinFun <- function(data, id.var, fun, return.data.frame = FALSE,
   var.spec <- var.detect ## change here the input so that the function continues to run
   pos <- stringr::str_locate_all(fun, var.detect)[[1]]
   stringr::str_sub(fun, pos) <- stringr::str_c("data[data[id.var] == ., var.detect]")
-  fun2run <- stringr::str_c("purrr::map(unique.id, ~ ", fun, ")") # one bracket too many, dont know why
+  fun2run <- stringr::str_c("purrr::map(unique.id, ~ ", fun, ")")
 
   # run function:
   id.results <- eval(parse(text = fun2run))
