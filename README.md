@@ -22,6 +22,7 @@ Note: Dependencies need to be installed and loaded manually!
 -   **lmerPlottt** A function to plot *t*-values of fixed effects from `lmer`-models
 -   **tStats** A function to extract *t*-statistics (*t*, *df*, *p*) from a t.test to plot it, use it in word or latex.
 -   **withinFun** Apply a function to each entry in a nested data frame, i. e. compute the mean of a measurement for each subject in a longitudinal study.
+-   **nestedAlpha** A function to compute alpha for nested scales, for example in multilevel data.
 
 Installing the package:
 -----------------------
