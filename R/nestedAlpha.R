@@ -30,15 +30,6 @@
 #'            level.3      = "person",
 #'            data = data)
 
-
-# function -----------------------------------------------------------
-
-# input to build the function:
-# data = data
-# item.level.1 = "variable"
-# level.2      = "day"
-# level.3      = "person"
-
 nestedAlpha <- function(item.level.1, level.2, level.3, data){
 
   # chek
@@ -51,16 +42,12 @@ nestedAlpha <- function(item.level.1, level.2, level.3, data){
   # model that was run (code)
   # optional: results of model (fitted model)
 
-
   # make model
   model.string <- stringr::str_c("lme4::lmer(", item.level.1,
                                  " ~ 1 + (1 | ", level.3,
                                  "/", level.2,
                                  "), data = data)")
 
-  # model <- lme4::lmer(Resp ~ 1 +
-  #              (1 | Subj/Day), data = data)
-  # (1 | Day)
   # run model
   model <- eval(parse(text = model.string))
 
@@ -82,20 +69,6 @@ nestedAlpha <- function(item.level.1, level.2, level.3, data){
 
 }
 
-
-
-# check values from Nezlek & Gable, 2001 -----------------------------
-
-
-## example 1, RSE
-data <- read.csv("/Users/kaihorstmann/Downloads/JRP-Supplemental/NezlekGable/RSE-item.csv")
-nestedAlpha(data, item.level.1 = "Resp", level.2 = "Day", level.3 = "Subj")
-
-
-data <- read.csv("/Users/kaihorstmann/Downloads/JRP-Supplemental/NezlekGable/GCO2-item.csv")
-nestedAlpha(data, item.level.1 = "resp", level.2 = "Day", level.3 = "Subj")
-names(data)
-head(data)
 
 
 
