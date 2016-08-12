@@ -3,36 +3,41 @@
 
 
 
-# function -----------------------------------------------------------
+
+# general information ------------------------------------------------
 
 # this function estmates the reliability of scales used in MLM models, following the article from Nezlek, 2016.
+# the function runs a simple model with 3 levels (no slopes, intercepts only) to decompose variance.
 
 
-# sample data frame
-# 10 persons
-person <- sort(rep(letters[1:10], 40))
-table(person)
-# 10 days, 4 items per day:
-day <- rep(sort(rep(seq(1:10), 4)), 10)
-table(day)
-# 4 items per day
-variable <- rnorm(400, 50, 10)
-
-data <- data.frame(person, day, variable, stringsAsFactors = FALSE)
-head(data)
+## further options to include:
+# reliability when item is dropped
+# reliability when all scales are estmated simultaneously (multivariate case)
 
 
-# input to the function:
+#' sample data frame, 10 persons, 10 days with 4 items per day
+#' person <- sort(rep(letters[1:10], 40))
+#' day <- rep(sort(rep(seq(1:10), 4)), 10)
+#' variable <- rnorm(400, 50, 10)
+#'data <- data.frame(person, day, variable, stringsAsFactors = FALSE)
+#'
+#'nestedAlpha(item.level.1 = "variable",
+#'            level.2      = "day",
+#'            level.3      = "person",
+#'            data = data)
+
+
+
+
+
+# function -----------------------------------------------------------
 
 data = data
 item.level.1 = "variable"
 level.2      = "day"
 level.3      = "person"
 
-nestedAlpha(data = data,
-            item.level.1 = "variable",
-            level.2      = "day",
-            level.3      = "person")
+
 
 nestedAlpha <- function(item.level.1, level.2, level.3, data){
 
