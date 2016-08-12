@@ -7,8 +7,8 @@
 
 # this function estmates the reliability of scales used in MLM models, following the article from Nezlek, 2016.
 
-# sample data frame
 
+# sample data frame
 # 10 persons
 person <- sort(rep(letters[1:10], 40))
 table(person)
@@ -28,22 +28,6 @@ data = data
 item.level.1 = "variable"
 level.2      = "day"
 level.3      = "person"
-
-library(stringr)
-
-
-# 3 level model in lme4
-library(lme4)
-
-
-
-## random effect variance
-# level 1 = residual: 9.318e+01
-# level 2 = day: 0.000e+00
-
-# lvl1 <- attr(VarCorr(mod), "sc")^2
-# lvl2 <- attr(VarCorr(mod)[[2]], "stddev")["(Intercept)"]^2
-# icc <- lvl2/(lvl1+lvl2)
 
 nestedAlpha(data = data,
             item.level.1 = "variable",
