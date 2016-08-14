@@ -2,7 +2,7 @@
 % Please edit documentation in R/nestedAlpha.R
 \name{nestedAlpha}
 \alias{nestedAlpha}
-\title{nestedAlpha}
+\title{Compute Alpha for Nested Data Structures}
 \usage{
 nestedAlpha(item.level.1, level.2, level.3, data, ...)
 }

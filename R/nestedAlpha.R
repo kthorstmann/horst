@@ -20,7 +20,7 @@
 
 # function -----------------------------------------------------------
 
-#' nestedAlpha
+#' Compute Alpha for Nested Data Structures
 #'
 #' This function returns a nested alpha for multilevel data as proposed by Nezlek (2016).
 #'
