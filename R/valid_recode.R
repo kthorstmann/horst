@@ -30,7 +30,7 @@
 #'                    id = c(1:14),
 #'                    stringsAsFactors = FALSE)
 #' valid_recode(variable = data$var1,
-#'                            valid_values = c("five", "Five", "5"))
+#'                            valid.values = c("five", "Five", "5"))
 #' valid_recode(variable = data$var2, valid.values =  c(1, 2), keep.na = TRUE)
 
 valid_recode <- function(variable, valid.values, keep.na = FALSE){
@@ -50,5 +50,6 @@ valid_recode <- function(variable, valid.values, keep.na = FALSE){
   hit_int <- as.integer(hit_correct)
   hit_int
 }
+
 
 
