@@ -40,7 +40,7 @@ valid_recode <- function(variable, valid.values, keep.na = FALSE){
   if (!typeof(variable) == typeof(valid.values)) {
     stop ("both objects must be the same type, e.g. both character")
   }
-  hit_correct <- is.element(var_trimmed, valid_values)
+  hit_correct <- is.element(var_trimmed, valid.values)
 
   # replace NA if requested
   if (keep.na) {
@@ -50,6 +50,5 @@ valid_recode <- function(variable, valid.values, keep.na = FALSE){
   hit_int <- as.integer(hit_correct)
   hit_int
 }
-
 
 
