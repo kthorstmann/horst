@@ -28,7 +28,7 @@ data <- data.frame(var1 = c("7", NA, "five", "nine", "eight", "six",
                    id = c(1:14),
                    stringsAsFactors = FALSE)
 valid_recode(variable = data$var1,
-                           valid_values = c("fünf", "Fünf", "5"))
+                           valid_values = c("five", "Five", "5"))
 valid_recode(variable = data$var2, valid_values =  c(1, 2), keep.na = TRUE)
 }
 
