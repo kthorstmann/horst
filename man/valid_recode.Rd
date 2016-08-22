@@ -4,14 +4,14 @@
 \alias{valid_recode}
 \title{Recode values to 0 and 1 according to predefined vector of valid elements}
 \usage{
-valid_recode(variable, valid_values, keep.na = FALSE)
+valid_recode(variable, valid.values, keep.na = FALSE)
 }
 \arguments{
 \item{variable}{The variable that should be recoded to 0 and 1, must be a vector.}
 
-\item{valid_values}{The vector of values that are valid, i. e. will be returned as 1.}
-
 \item{keep.na}{Logical, should missings be kept as \code{NA}? Default is to \code{FALSE}, returning 0 for a missing value.}
+
+\item{valid_values}{The vector of values that are valid, i. e. will be returned as 1.}
 }
 \value{
 A vector containing 0 and 1 (and \code{NA} if specified) of type \code{integer}.
@@ -29,6 +29,6 @@ data <- data.frame(var1 = c("7", NA, "five", "nine", "eight", "six",
                    stringsAsFactors = FALSE)
 valid_recode(variable = data$var1,
                            valid_values = c("five", "Five", "5"))
-valid_recode(variable = data$var2, valid_values =  c(1, 2), keep.na = TRUE)
+valid_recode(variable = data$var2, valid.values =  c(1, 2), keep.na = TRUE)
 }
 

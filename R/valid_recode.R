@@ -31,13 +31,13 @@
 #'                    stringsAsFactors = FALSE)
 #' valid_recode(variable = data$var1,
 #'                            valid_values = c("five", "Five", "5"))
-#' valid_recode(variable = data$var2, valid_values =  c(1, 2), keep.na = TRUE)
+#' valid_recode(variable = data$var2, valid.values =  c(1, 2), keep.na = TRUE)
 
-valid_recode <- function(variable, valid_values, keep.na = FALSE){
+valid_recode <- function(variable, valid.values, keep.na = FALSE){
   # remove whitespace
   var_trimmed <- stringr::str_trim(variable)
 
-  if (!typeof(variable) == typeof(valid_values)) {
+  if (!typeof(variable) == typeof(valid.values)) {
     stop ("both objects must be the same type, e.g. both character")
   }
   hit_correct <- is.element(var_trimmed, valid_values)
