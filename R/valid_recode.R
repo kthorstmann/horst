@@ -3,7 +3,7 @@
 # function todos -----------------------------------------------------
 
 # include checks
-  # no vectors in the varibale
+  # no vectors in the variable
 
 # add tests
 
@@ -11,7 +11,7 @@
 
 #' Recode values to 0 and 1 according to predefined vector of valid elements
 #'
-#' The function recodes a vector of elelemnts into 0 and 1, based on a vector of valid values. It assumes that any correct answer in a questionnaire will be coded as 1 and all other answers (per default, even \code{NA}) will be returned as 0.
+#' The function recodes a vector of elements into 0 and 1, based on a vector of valid values. It assumes that any correct answer in a questionnaire will be coded as 1 and all other answers (per default, even \code{NA}) will be returned as 0.
 #'
 #' @param variable The variable that should be recoded to 0 and 1, must be a vector.
 #' @param valid_values The vector of values that are valid, i. e. will be returned as 1.
