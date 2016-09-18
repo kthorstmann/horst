@@ -3,7 +3,7 @@ Type: Package
 Title: Functions for the processing of questionnaire data
 Version: 0.1
 Date: 2016-01-12
-Authors@R: person("Kai Tobias", "Horstmann", email = "horstmak@hu-berlin.de", role = c("aut", "cre"))
+Author: person("Kai Tobias", "Horstmann", email = "horstmak@hu-berlin.de", role = c("aut", "cre"))
 Maintainer: Kai T. Horstmann <horstmak@hu-berlin.de>
 Description: A package with different functions used at Psychological
     Diagnostics at HU Berlin. Mainly functions for the screening, recoding and

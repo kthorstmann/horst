@@ -17,7 +17,7 @@ valid_recode(variable, valid.values, keep.na = FALSE)
 A vector containing 0 and 1 (and \code{NA} if specified) of type \code{integer}.
 }
 \description{
-The function recodes a vector of elelemnts into 0 and 1, based on a vector of valid values. It assumes that any correct answer in a questionnaire will be coded as 1 and all other answers (per default, even \code{NA}) will be returned as 0.
+The function recodes a vector of elements into 0 and 1, based on a vector of valid values. It assumes that any correct answer in a questionnaire will be coded as 1 and all other answers (per default, even \code{NA}) will be returned as 0.
 }
 \examples{
 
