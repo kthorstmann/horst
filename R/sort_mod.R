@@ -31,7 +31,7 @@ sort_mod  <- function(fit, cut = 10){
 
 #' Get fitmeasures from lavaan objects as text.
 #'
-#' This function extracts the most common used fit measures in a text format, such that they are easy to extract and copy/edit in a word document. \textbf{The default extracts are the rpbust fit measures}.
+#' This function extracts the most common used fit measures in a text format, such that they are easy to extract and copy/edit in a word document. \strong{The default extracts are the robust fitmeasures}.
 #'
 #' Further implementations:
 #'
@@ -53,7 +53,7 @@ sort_mod  <- function(fit, cut = 10){
 #' speed   =~ x7 + x8 + x9 '
 #' fit <- lavaan::cfa(HS.model, data=lavaan::HolzingerSwineford1939, estimator = "MLR")
 #' lav_fit(fit, 2)
-lav_fit <- function(fit, round, extract.in = "word"){
+lav_fit <- function(fit, round = 2, extract.in = "word"){
   fits <- lavaan::fitMeasures(fit)
   fits <- round(fits, round)
   chi_sq <- fits["chisq.scaled"]
@@ -88,7 +88,7 @@ lav_fit <- function(fit, round, extract.in = "word"){
   rmsea.txt <- paste0("RMSEA = ", rmsea, ", 95% CI [", rmsea.lo, "; ", rmsea.up, "]")
   srmr.txt <- paste0("SRMR = ", srmr)
 
-  out.text <- paste0(chiq.txt, cfi.txt, rmsea.txt, srmr.txt, sep = " ")
+  out.text <- paste(chiq.txt, cfi.txt, rmsea.txt, srmr.txt, sep = "; ")
   out.text
 }
 

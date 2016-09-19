@@ -4,7 +4,7 @@
 \alias{lav_fit}
 \title{Get fitmeasures from lavaan objects as text.}
 \usage{
-lav_fit(fit, round, extract.in = "word")
+lav_fit(fit, round = 2, extract.in = "word")
 }
 \arguments{
 \item{fit}{A fitted lavaan object.}
@@ -17,7 +17,7 @@ lav_fit(fit, round, extract.in = "word")
 The function returns a text with the Chisq-value, the corresponding \emph{df} and \emph{p}-value, the CFI, RMSEA and SRMR. Best used for objects fitted with \code{estimator = "MLR"}.
 }
 \description{
-This function extracts the most common used fit measures in a text format, such that they are easy to extract and copy/edit in a word document. \textbf{The default extracts are the rpbust fit measures}.
+This function extracts the most common used fit measures in a text format, such that they are easy to extract and copy/edit in a word document. \strong{The default extracts are the robust fitmeasures}.
 }
 \details{
 Further implementations:
