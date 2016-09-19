@@ -21,7 +21,7 @@ Sorted Modification Indices from lavaan objects
 HS.model <- ' visual  =~ x1 + x2 + x3
 textual =~ x4 + x5 + x6
 speed   =~ x7 + x8 + x9 '
-fit <- lavaan::cfa(HS.model, data=lavaan::HolzingerSwineford1939)
+fit <- lavaan::cfa(HS.model, data=lavaan::HolzingerSwineford1939, estimator = "MLR")
 sort_mod(fit, cut = 10)
 }
 
