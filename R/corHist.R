@@ -16,8 +16,6 @@
 #'
 #' @seealso \code{\link[stats]{cor}}
 
-
-
 corHist <- function(data, var1, var2, cluster) {
   requireNamespace("purrr", quietly = TRUE)
 

@@ -26,6 +26,7 @@ Note: Dependencies need to be installed and loaded manually!
 -   **valid\_recode** Recodes values according to a predefined vector of elements into 1 and 0 (useful for recoding values of an knowledge test with open questions).
 -   **sort\_mod** Get sorted modification indices from lavaan.
 -   **lav\_fit** Get fitmeasures from lavaan objects as ready text.
+-   **modus** Get the modus of a variable.
 
 Installing the package:
 -----------------------
