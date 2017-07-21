@@ -24,7 +24,7 @@ gimme_list <- function(data, state_vars, id_var, min_Ti){
   stopifnot(is.numeric(min_Ti))
   if (is.factor(data[,id_var])) {
     data[,id_var] <- as.character(data[,id_var])
-    message("ID/group variable was transformed into factor")
+    message("ID/group variable was transformed from factor into character")
   }
   sub_df <- data[c(id_var, state_vars)]
   counts_per_id <- aggregate(sub_df[, id_var],
