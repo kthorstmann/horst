@@ -1,5 +1,5 @@
 
-#' Turns Wide Data Into a List of Data Frames
+#' Turns Long Data Into a List of Data Frames
 #'
 #' The function turns wide data into a list of data frames that can be used as input for the command \code{\link[gimme]{gimmeSEM}}.
 #'

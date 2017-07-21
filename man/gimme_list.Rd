@@ -2,7 +2,7 @@
 % Please edit documentation in R/gimme_list.R
 \name{gimme_list}
 \alias{gimme_list}
-\title{Turns Wide Data Into a List of Data Frames}
+\title{Turns Long Data Into a List of Data Frames}
 \usage{
 gimme_list(data, state_vars, id_var, min_Ti)
 }
