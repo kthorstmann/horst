@@ -19,7 +19,7 @@ gimme_list(data, state_vars, id_var, min_Ti)
 Returns a list of data frames as required by \code{\link[gimme]{gimmeSEM}}. Each entry in the list is a data frame for one participant/group.
 }
 \description{
-The function turns wide data into a list of data frames that can be used as input for the command \code{\link[gimme]{gimmeSEM}}.
+The function turns long data into a list of data frames that can be used as input for the command \code{\link[gimme]{gimmeSEM}}.
 }
 \examples{
 ## simulate data
