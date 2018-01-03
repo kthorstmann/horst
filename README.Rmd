@@ -35,7 +35,7 @@ Note: Dependencies need to be installed and loaded manually!
 
 Run the following code lines:
 
-```
+```{r, echo = FALSE}
 install.packages("devtools")
 library(devtools)
 devtools::install_github("kthorstmann/horst")
