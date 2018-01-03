@@ -10,7 +10,7 @@
 #' @param digits The number of digits that should be displayed in the resulting data frame.
 #' @param cut The smalles loadings that should be displayed. If \code{NULL}, all loadings are returned.
 #'
-#'@return A data frame with the \code{shortitem} as rownames, in the first column the long items (from \code{longitem}), and in the next columns the factors/components that were extracted during the EFA, witht heir factor loadings
+#'@return A data frame with the \code{shortitem} as rownames, in the first column the long items (from \code{longitem}), and in the next columns the factors/components that were extracted during the EFA, witht heir factor loadings.
 #'
 #' @export
 #'
