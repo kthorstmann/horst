@@ -8,7 +8,7 @@
 #' @param shortitem The variable in the codebook containing the short names of the item, which were also used in the data frame for the \code{\link[psych]{efa}}.
 #' @param longitem The variable in the codebook containing the full item (which was for example given to the participant in the study).
 #' @param digits The number of digits that should be displayed in the resulting data frame.
-#' @param cut The smalles loadings that should be displayed
+#' @param cut The smalles loadings that should be displayed. If \code{NULL}, all loadings are returned.
 #'
 #'@return A data frame with the \code{shortitem} as rownames, in the first column the long items (from \code{longitem}), and in the next columns the factors/components that were extracted during the EFA, witht heir factor loadings
 #'
@@ -17,16 +17,17 @@
 #' @seealso  \code{\link[psych]{efa}} to run an EFA, \code{\link[openxlsx]{write.xlsx}} to write the resulting data frame into a user friendly .xlsx format.
 
 matchItems <- function(efa.result, codebook, shortitem = "Namen",
-                       longitem = "Items", digits=3, cut=.30){
-  # based on psych package, must be loaded
-  fs        = fa.sort(efa.result)
-  loadings  = as.data.frame(fs$loadings[1:nrow(fs$loadings), 1:ncol(fs$loadings)])
-  matches   = match(x = rownames(loadings), table = codebook[,shortitem])
-  Item      = codebook[matches,longitem]
-  resultEFA = data.frame(Item, loadings)
-  is.num    = sapply(resultEFA, is.numeric)
-
-  resultEFA[is.num] = lapply(resultEFA[is.num], round, digits) # round to digits
-  resultEFA[is.num][abs(resultEFA[is.num]) <= cut] = ""
-  resultEFA
+                       longitem = "Items", digits=3, cut=NULL){
+  fs        <-  psych::fa.sort(efa.result)
+  loadings  <-  as.data.frame(fs$loadings[1:nrow(fs$loadings), 1:ncol(fs$loadings)])
+  colnames(loadings) <- attr(fs$loadings, which="dimnames")[[2]]
+  matches   <-  match(x = rownames(loadings), table = codebook[,shortitem])
+  Item      <-  codebook[matches,longitem]
+  resultEFA <-  data.frame(Item, loadings)
+  is.num    <-  sapply(resultEFA, is.numeric)
+  resultEFA[is.num] <-  lapply(resultEFA[is.num], round, digits) # round to digits
+  if (!is.null(cut)) {
+    resultEFA[is.num][abs(resultEFA[is.num]) <= cut] = NA
+  }
+  return(resultEFA)
 }
