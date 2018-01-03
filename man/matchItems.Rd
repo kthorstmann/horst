@@ -5,7 +5,7 @@
 \title{Match short and long item names in EFA}
 \usage{
 matchItems(efa.result, codebook, shortitem = "Namen", longitem = "Items",
-  digits = 3, cut = 0.3)
+  digits = 3, cut = NULL)
 }
 \arguments{
 \item{efa.result}{A fitted EFA from \code{\link[psych]{efa}}.}
@@ -18,10 +18,10 @@ matchItems(efa.result, codebook, shortitem = "Namen", longitem = "Items",
 
 \item{digits}{The number of digits that should be displayed in the resulting data frame.}
 
-\item{cut}{The smalles loadings that should be displayed}
+\item{cut}{The smalles loadings that should be displayed. If \code{NULL}, all loadings are returned.}
 }
 \value{
-A data frame with the \code{shortitem} as rownames, in the first column the long items (from \code{longitem}), and in the next columns the factors/components that were extracted during the EFA, witht heir factor loadings
+A data frame with the \code{shortitem} as rownames, in the first column the long items (from \code{longitem}), and in the next columns the factors/components that were extracted during the EFA, witht heir factor loadings.
 }
 \description{
 Get long items from an item-codebook and the results of an exploratory factor analysis (EFA) combined in one data frame.

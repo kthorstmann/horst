@@ -27,6 +27,7 @@ Note: Dependencies need to be installed and loaded manually!
 -   **sort\_mod** Get sorted modification indices from lavaan.
 -   **lav\_fit** Get fitmeasures from lavaan objects as ready text.
 -   **modus** Get the modus of a variable.
+-   **make\_bold** Format entries in a data frame such that they will be displayed as bold in Markdown.
 
 Installing the package:
 -----------------------
