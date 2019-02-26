@@ -33,4 +33,3 @@ library(lme4)
 fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 fit
 }
-

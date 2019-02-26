@@ -19,4 +19,3 @@ Get t-values of multilevel-models
 fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 fit
 }
-

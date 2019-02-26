@@ -26,4 +26,3 @@ the pearson correlation is used for computing the correlation.
 \seealso{
 \code{\link[stats]{cor}}
 }
-

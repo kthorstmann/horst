@@ -22,4 +22,3 @@ fit <- lmerSimple("Reaction", "Days", "Days", "", "Subject", sleepstudy)
 fit
 lmerPlottt(list(fit))
 }
-

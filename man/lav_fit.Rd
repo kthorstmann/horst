@@ -34,4 +34,3 @@ speed   =~ x7 + x8 + x9 '
 fit <- lavaan::cfa(HS.model, data=lavaan::HolzingerSwineford1939, estimator = "MLR")
 lav_fit(fit, 2)
 }
-

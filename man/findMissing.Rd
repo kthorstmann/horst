@@ -31,4 +31,3 @@ If \code{invalids} is set to \code{FALSE}, the values entered in
 to \code{TRUE}, values specified in \code{values} are invalid and
 reported.
 }
-

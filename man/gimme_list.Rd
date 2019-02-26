@@ -28,4 +28,3 @@ data_long <- data.frame(ID = sort(rep(letters[1:10], 3)),
                        var2 = sort(rep(11:20, 3)))
 gimme_list(data_long, state_vars = c("var1", "var2"), id_var = "ID", min_Ti = 2)
 }
-

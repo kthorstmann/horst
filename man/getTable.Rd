@@ -51,4 +51,3 @@ signifcance levels are also reported, based on the function
   computes the \emph{p}-values, and \code{\link[xlsx]{write.xlsx}} for
   the function that writes the Exceltable.
 }
-
