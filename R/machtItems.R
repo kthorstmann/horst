@@ -16,7 +16,7 @@
 #'
 #' @seealso  \code{\link[psych]{efa}} to run an EFA, \code{\link[openxlsx]{write.xlsx}} to write the resulting data frame into a user friendly .xlsx format.
 
-matchItems <- function(efa.result, codebook, shortitem = "Namen",
+matchItems <- function(efa.result, codebook, shortitem = "name",
                        longitem = "Items", digits=3, cut=NULL){
   fs        <-  psych::fa.sort(efa.result)
   loadings  <-  as.data.frame(fs$loadings[1:nrow(fs$loadings), 1:ncol(fs$loadings)])
